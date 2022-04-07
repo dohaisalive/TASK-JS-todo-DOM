@@ -1,3 +1,4 @@
+//used to display the item in html
 function tasksItemComponent(task) {
   // You are going to add your HTML design here.
   // Do the option design in HTML page, test it, and replace it if you need instead of this code.
