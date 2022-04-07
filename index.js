@@ -13,18 +13,18 @@ tasks = [
 ];
 
 categories = ["Movies", "Groceries"];
-// // SAMPLE
+// SAMPLE
 renderCategories(categories, CATEGORY_SELECTOR);
 renderCategories(categories, CATEGORY_FILTER);
 renderTasks(tasks, "tasks-list");
 
 function taskChecked(taskId, checked) {
-  //checked from user
-  // You are given the task id
-  // let toDelete = tasks.indexOf(tasks.find((element) => element.id === taskId));
-  // tasks.splice(toDelete, 1);
-  // renderTasks(tasks, "tasks-list");
-  console.log(`${checked ? "" : "UN"}CHECKED TASK`, taskId);
+  //"checked" is from user
+  let checkedTask = tasks.find((element) => element.id === taskId);
+  checkedTask.done = checked;
+  renderTasks(tasks, "tasks-list");
+
+  // console.log(`${checked ? "" : "UN"}CHECKED TASK`, taskId);
 }
 
 function addTask() {
