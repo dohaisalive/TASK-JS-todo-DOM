@@ -20,8 +20,7 @@ renderTasks(tasks, "tasks-list");
 
 function taskChecked(taskId, checked) {
   //"checked" is from user
-  let checkedTask = tasks.find((element) => element.id === taskId);
-  checkedTask.done = checked;
+  tasks.find((element) => element.id === taskId).done = checked;
   renderTasks(tasks, "tasks-list");
 
   // console.log(`${checked ? "" : "UN"}CHECKED TASK`, taskId);
@@ -44,7 +43,6 @@ function addTask() {
 
 function addCategory() {
   const newCategory = getNewCategoryText();
-  // continue the code here
   categories.push(newCategory);
   renderCategories(categories, CATEGORY_SELECTOR);
   renderCategories(categories, CATEGORY_FILTER);
@@ -54,7 +52,6 @@ function addCategory() {
 function filterTasks() {
   const selectedCategory = getSelectedCategoryById(CATEGORY_FILTER);
   const done = getFilteredDone();
-  // continue the code here
   // let filteredTasks = tasks.filter(
   //   (element) => element.category === selectedCategory
   // );

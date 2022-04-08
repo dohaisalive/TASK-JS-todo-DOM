@@ -1,9 +1,25 @@
 .todo-item {
   display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 body {
   font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+  background-color: pink;
+}
+
+.both {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 button {
@@ -20,7 +36,7 @@ button {
 
 select {
   font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
-  background-color: rgb(178, 178, 179);
+  background-color: rgb(232, 232, 232);
   padding: 10px 10px;
   border-radius: 8px;
   border-color: rgb(178, 178, 179);
@@ -33,3 +49,52 @@ input {
   border-radius: 8px;
   border-color:rgb(228, 228, 228);
 }
+
+
+ .left-side{
+  display: flex;
+  flex-direction: column;
+  gap: 10px 10px;
+  justify-content: flex-start;
+  background-color: white;
+
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  border-radius: 8px;
+  margin-top: 10%;
+  min-width: 500px;
+  
+
+ }
+ 
+ .right-side{
+  display: flex;
+  flex-direction: column;
+  gap: 100px 100px;
+  justify-content: flex-start;
+  background-color: white;
+ 
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+ 
+
+  border-radius: 8px;
+  margin-top: 12%;
+
+  height: 400px;
+  width: 400px;
+
+ }
+
+ hr {
+  border-top: 7px solid #663776;;
+ }
+
+ .item-category {
+   color:rgb(113, 113, 113);
+ }
