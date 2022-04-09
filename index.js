@@ -52,19 +52,22 @@ function addCategory() {
 function filterTasks() {
   const selectedCategory = getSelectedCategoryById(CATEGORY_FILTER);
   const done = getFilteredDone();
-  // let filteredTasks = tasks.filter(
-  //   (element) => element.category === selectedCategory
-  // );
-  // renderTasks(filteredTasks, "tasks-list");
+
+  let filteredTasks = tasks.filter(
+    (element) => element.category === selectedCategory
+  );
+  //renderTasks(filteredTasks, "tasks-list");
 
   let doneTasks = tasks.filter((element) => element.done);
+  let filteredDoneTasks = filteredTasks.filter((element) => element.done);
 
   if (done) {
     renderTasks(doneTasks, "tasks-list");
+  } else if (selectedCategory) {
+    renderTasks(filteredTasks, "tasks-list");
+  } else if (selectedCategory && done) {
+    renderTasks(filteredDoneTasks, "tasks-list");
   } else {
     renderTasks(tasks, "tasks-list");
   }
-
-  // REMOVE ME: sample alert
-  //alert(`Category: ${selectedCategory} | done: ${done}`);
 }
